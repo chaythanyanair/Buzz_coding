@@ -1,0 +1,53 @@
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
+-->
+
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./partials/head %>
+</head>
+<a href="/">
+	<img border="0" alt="Buzz" src="/images/Buzz.png" width="100" height="100">
+
+</a>
+<p style="color:#008ae6;font-size:100%;"><%= tagline %></p>
+<body class="container">
+
+    <header>
+        <% include ./partials/header %>
+    </header>   
+
+    <main>
+        <div class="jumbotron">
+        	<p>Upload your code!</p>
+        	<a href="/upload">
+        	<button type="button" class="btn btn-success" id="upload">
+        	Upload</button>
+        	</a>
+        	<!--<script type="text/javascript">
+        		$('#upload').click(function(){
+        			$.post('/upload');
+        		});
+        	</script>
+            -->
+        </div>
+    </main>
+
+    <h2>Loop</h2>
+	<ul>
+    	<% drinks.forEach(function(drink) { %>
+        	<li><%= drink.name %> - <%= drink.drunkness %></li>
+    	<% }); %>
+	</ul>
