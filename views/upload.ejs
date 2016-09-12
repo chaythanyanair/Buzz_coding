@@ -1,28 +1,72 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-    <% include ./partials/head %>
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <% include ./partials/head %>
+
 </head>
+
 <body class="container">
-
-    <header>
+<header>
         <% include ./partials/header %>
-    </header>
+</header>   
 
-    <main>
-    <form method="post" action="/">
-  <input type="test" name="field1">
-  <input type="test" name="field2">
-  <input type="submit">
+<div class="jumbatron">
+<div class="form-style-5" allign = "left">
+<form>
+<fieldset>
+<legend><span class="number">1</span> Code Info</legend>
+<input type="text" name="field1" placeholder="Your Name *">
+<input type="email" name="field2" placeholder="Your Email *">
+<label for="job">Coding Language:</label>
+<select id="lang" name="field3">
+<optgroup>
+  <option value="C">C</option>
+  <option value="C++">C++</option>
+  <option value="Python">Python</option>
+  <option value="Java">Java</option>
+  <option value="C-hash">C#</option>
+  <option value="Haskell">Haskell</option>
+  <option value="Erlang">Erlang</option>
+  <option value="Scala">Scala</option>
+  <option value="Ocaml">Ocaml</option>
+  <option value="other">Other</option>
+</optgroup>
+</select>
+<textarea name="field3" placeholder="About your Application/ Code"></textarea>
+</fieldset>
+<!--<label for="job">Interests:</label>
+<select id="job" name="field4">
+<optgroup label="Indoors">
+  <option value="fishkeeping">Fishkeeping</option>
+  <option value="reading">Reading</option>
+  <option value="boxing">Boxing</option>
+  <option value="debate">Debate</option>
+  <option value="gaming">Gaming</option>
+  <option value="snooker">Snooker</option>
+  <option value="other_indoor">Other</option>
+</optgroup>
+<optgroup label="Outdoors">
+  <option value="football">Football</option>
+  <option value="swimming">Swimming</option>
+  <option value="fishing">Fishing</option>
+  <option value="climbing">Climbing</option>
+  <option value="cycling">Cycling</option>
+  <option value="other_outdoor">Other</option>
+</optgroup>
+</select> -->     
+
+<fieldset>
+<legend><span class="number">2</span> Additional Info</legend>
+<textarea name="field4" placeholder="About Your School"></textarea>
+</fieldset>
+<input type="submit" value="Apply" allign = "left" />
 </form>
-       
-    </main>
-
-    <footer>
-      
-    </footer>
-    
+</div>
+ </div>   
 </body>
 </html>
 
