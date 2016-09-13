@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
 
   res.render('index', { 
 
-  	drinks:drinks,
+    drinks:drinks,
   	title: 'Home',
   	tagline: tagline,
   	res: res
@@ -44,6 +44,22 @@ router.get('/upload', function(req, res, next) {
 
   });
 
+});
+
+router.post('/upload', function(req,res,next) {
+
+  var name = req.body.name;
+  var email = req.body.email;
+  var code = req.body.code;
+  var about_code = req.body.about_code;
+  var fblink = req.body.fblink;
+  var gitlink = req.body.gitlink;
+  var about = req.body.about;
+  console.log(req.files.task);
+  console.log(JSON.stringify(req.body ));
+
+
+  
 });
 
 module.exports = router;

@@ -6,6 +6,16 @@
 
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <% include ./partials/head %>
+  <script type="text/javascript">
+   
+
+    function foo(){
+      document.getElementById("uploadBtn").onchange = function () {
+      document.getElementById("uploadFile").value = this.value;
+      };
+      document.getElementById("uploadBtn").click();
+    }
+  </script>
 
 </head>
 
@@ -16,13 +26,13 @@
 
 <div class="jumbatron">
 <div class="form-style-5" allign = "left">
-<form>
+<form action="/upload" method = 'post'>
 <fieldset>
 <legend><span class="number">1</span> Code Info</legend>
-<input type="text" name="field1" placeholder="Your Name *">
-<input type="email" name="field2" placeholder="Your Email *">
+<input type="text" name="name" placeholder="Your Name *" required="">
+<input type="email" name="email" placeholder="Your Email *" required="">
 <label for="job">Coding Language:</label>
-<select id="lang" name="field3">
+<select id="lang" name="code">
 <optgroup>
   <option value="C">C</option>
   <option value="C++">C++</option>
@@ -36,7 +46,7 @@
   <option value="other">Other</option>
 </optgroup>
 </select>
-<textarea name="field3" placeholder="About your Application/ Code"></textarea>
+<textarea name="about_code" placeholder="About your Application/ Code" required=""></textarea>
 </fieldset>
 <!--<label for="job">Interests:</label>
 <select id="job" name="field4">
@@ -61,9 +71,19 @@
 
 <fieldset>
 <legend><span class="number">2</span> Additional Info</legend>
-<textarea name="field4" placeholder="About Your School"></textarea>
+<input type="text" name="fblink" placeholder="Your facebook link">
+<input type="text" name="gitlink" placeholder="Your GitHub link">
+
+<textarea name="about" placeholder="About Yourself"></textarea><br>
+<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+<input name = "file" id="uploadBtn" type="file" class="hidden" />
+<div class="button" id="fileupload" onclick="foo()">
+    <span>Upload</span>    
+</div><br>
+<br>
+
 </fieldset>
-<input type="submit" value="Apply" allign = "left" />
+<input type="submit" value="Submit" allign = "left" />
 </form>
 </div>
  </div>   
