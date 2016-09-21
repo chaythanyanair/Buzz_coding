@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var multer = require('multer');
 
+var upload = multer({dest: 'uploads/'});
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
@@ -36,7 +38,7 @@ router.get('/about', function(req, res, next) {
 });
 
 
-/* POST upload page. */
+/* GET upload page. */
 router.get('/upload', function(req, res, next) {
   
   res.render('upload', {
@@ -46,7 +48,9 @@ router.get('/upload', function(req, res, next) {
 
 });
 
-router.post('/upload', function(req,res,next) {
+
+/* POST upload page */
+router.post('/upload', upload.single('file'),function(req,res,next) {
 
   var name = req.body.name;
   var email = req.body.email;
@@ -55,11 +59,21 @@ router.post('/upload', function(req,res,next) {
   var fblink = req.body.fblink;
   var gitlink = req.body.gitlink;
   var about = req.body.about;
-  console.log(req.files.task);
-  console.log(JSON.stringify(req.body ));
+  console.log(req.file);
+  console.log(req.body);
+  req.flash('info', "sucessfully uploaded!!!");
+  res.redirect('/');
 
 
   
 });
 
+
+/* GET Login page */
+router.get('/login',function(req,res,next){
+
+  res.render('login',{
+    title: 'Login'
+  });
+});
 module.exports = router;

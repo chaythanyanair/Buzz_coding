@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
   </head>
   <body>
     <h1><%= title %></h1>
@@ -17,18 +17,21 @@
 <html lang="en">
 <head>
     <% include ./partials/head %>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
     
 </head>
-<a href="/">
-	<img border="0" alt="Buzz" src="/images/Buzz.png" width="100" height="100">
-
-</a>
-<p style="color:#008ae6;font-size:100%;"><%= tagline %></p>
-<body class="container">
-
-    <header>
+<header style="padding-bottom: 76px;">
         <% include ./partials/header %>
-    </header>   
+</header> 
+<slideshow>
+
+    <% include ./partials/slideshow %>
+</slideshow>
+<body class="container" style="color: rgb(0, 183, 255);">
+
+      
 
     <main>
         <div class="jumbotron">

@@ -144,4 +144,67 @@ a {
     background: #109177;
     cursor: pointer;
 }
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: -2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: black;
+    font-size: 39px;
+}
+#glyph{
+    line-height: 23px;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    text-align: left;
+}
+
+#buzzimg{
+    margin-left: -11px;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: -59px;
+    border: 1px solid transparent;
+    margin-top: -50px;
+}
+.mySlides {
+    display:none;
+}
+
+#slide{
+    white-space:nowrap;
+    height:50%;
+    margin-left: 7px;
+    
+}
+.container {
+    width: 99%;
+}
+
+#rightnavbar{
+    font-size: 14px;
+    padding-right: 10px;
+}
+#leftnavbar{
+    font-size: 16px;
+    padding-left: 20px;
+}
+#signup{
+    font-size: 21px;
+}
+#login{
+    font-size: 21px;
+    
+}
+.img{
+    float: left;
+}
 </style>
+
