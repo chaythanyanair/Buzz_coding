@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<% include ./partials/head %>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+	<link rel='stylesheet' href='/stylesheets/signup.css' />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<header  id = "signupheader" style="padding-bottom: 35px;">
+    	    <% include ./partials/header %>
+    		<script src="/javascripts/signup.js"></script>
+	</header>
+</head>
+<body class="container">
+<div class="jumbatron">
+<div class="form-style-5" allign = "left">
+	<form action="" name="signupform" method="POST" onsubmit=" return validate()">
+			<br><br><br><br><br>
+			<legend><span class="number">1</span> Personal Info</legend> 
+			
+			<input type="text" id = "first" placeholder="First Name*" name="fname" required="" style="height: 36px;"> 
+			
+			<br>
+			<input type="text" placeholder="Last Name*" name="lname" required="" style="height: 36px;"> <br>
+			
+			<input type="email" placeholder="Your email*" name="email" required="" style="height: 36px;"> <br>
+			
+			<input type="date" placeholder="Date of Birth*" name="dob" required="" style="height: 36px;" min="1950-01-01" max="2015-12-12"> <br>
+
+			<input type="text" placeholder="Phone number*" name="phno" required="" style="height: 38px;"> <br>
+
+			<legend><span class="number">2</span> Set your Username and Password </legend>
+
+			<input type="text" placeholder="Username" name="uname" required="" style="height: 36px;"> <br>
+
+			<input type="password" placeholder="Enter password" name="pass1" required="" style="height: 36px;"> <br>
+			
+			<input type="password" placeholder="Confirm password" name="pass2" required="" style="height: 38px;"> <br>
+			
+			<input type="submit" value="Submit" allign = "left" />
+
+		
+	</form>
+</div>
+</div>
+</body>
+</html>

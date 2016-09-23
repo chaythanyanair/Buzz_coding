@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> My Site</title>
+	<title> <%= title %></title>
 
  <% include ./partials/head %>
 <!-- Latest compiled and minified CSS -->
@@ -15,7 +15,7 @@
 
 
 <script src="/javascripts/index.js"></script> 
-<header  id = "loginheader" style="padding-bottom: 76px;">
+<header  id = "loginheader" style="padding-bottom: 35px;">
         <% include ./partials/header %>
 </header> 
 
@@ -27,8 +27,11 @@
 </center>
 
 <div class="container">
-  <div class="jumbotron">
-
+  <div class="jumbotron" id="loginjumbotron">
+  <div id= "signupinlogin">
+    New user?
+  <a href="/signup"> Signup </a>for free 
+  </div>
     <form action="" name = "form1" method="POST" onsubmit=" return check()">
       <div class="imgcontainer">
         <img src="/images/img_avatar2.png" alt="Avatar" class="avatar">
@@ -41,21 +44,15 @@
 
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required><br>
-        <input type="checkbox" checked="checked" style="margin-left: 53px;"> Remember me
-         <span class="psw" style="margin-left: -27px;">Forgot <a href="#">password?</a></span>  
+        <input type="checkbox" checked="checked" style="margin-left: 15px;"> Remember me
+         <span class="psw" style="margin-left: -92px;">Forgot <a href="#">password?</a></span>  
         <br><br>
-        <button id = "loginsubmit" type="submit" >Login</button><br>
+        <button id = "loginsubmit" type="submit" >Login</button>
         
       </center>
   
   </div>
-  <center>
-    <button type="button" class="cancelbtn">Cancel</button>
-   
-  </center>
- 
-  
- </form>
+  </form>
  </div>
 </div>
 </body>

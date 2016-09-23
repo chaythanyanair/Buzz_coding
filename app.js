@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/buzzdatabase');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

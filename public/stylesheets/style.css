@@ -36,6 +36,7 @@ a {
 .form-style-5 input[type="search"],
 .form-style-5 input[type="time"],
 .form-style-5 input[type="url"],
+.form-style-5 input[type="password"],
 .form-style-5 textarea,
 .form-style-5 select {
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -193,7 +194,7 @@ a {
     padding-right: 10px;
 }
 #leftnavbar{
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 20px;
 }
 #signup{
@@ -205,6 +206,11 @@ a {
 }
 .img{
     float: left;
+}
+#uploadheader{
+    padding-top: 40px;
+    width: 109%;
+    margin-left: -55px;
 }
 </style>
 

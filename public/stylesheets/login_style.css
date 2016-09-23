@@ -76,3 +76,12 @@ span.psw {
 #loginsubmit{
     margin-left: 68px;
 }
+
+#signupinlogin{
+    float: right;
+}
+#loginjumbotron{
+    width: 84%;
+    margin-left: 71px;
+    margin-top: -23px;
+}

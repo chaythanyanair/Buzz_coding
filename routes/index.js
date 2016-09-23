@@ -76,4 +76,21 @@ router.get('/login',function(req,res,next){
     title: 'Login'
   });
 });
+
+
+/*GET Signup Page */
+
+router.get('/signup', function(req,res,next){
+
+  res.render('signup',{
+    title: 'Signup'
+  });
+});
+
+/*POST Signup page */
+router.post('/signup',function(req,res,next){
+  res.redirect('/');
+
+
+})
 module.exports = router;
